@@ -1,0 +1,24 @@
+package homeworks;
+
+public class SimpleNumber {
+	int N = 1231231;
+	
+	for (int i = 2 ; i<N; i++) {
+		if (N % i == 0) {
+			//N не простое
+			System.out.println(" не простое");
+			break;
+			//System.exit(0);
+		}
+	}
+	System.out.println("простое");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

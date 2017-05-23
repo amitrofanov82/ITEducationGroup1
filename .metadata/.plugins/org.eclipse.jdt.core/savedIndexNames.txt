@@ -1,0 +1,8 @@
+INDEX VERSION 1.127+U:\Mitrofanov\Eclipse_WS\.metadata\.plugins\org.eclipse.jdt.core
+210662084.index
+2333157282.index
+2072592978.index
+560139125.index
+3800044520.index
+2095351371.index
+199472861.index

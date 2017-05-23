@@ -1,0 +1,38 @@
+
+public class OtherMethods {
+	
+	public static void main(String[] args) {
+		double a=2, b=2, c=2;
+		double d;
+		
+		//calculateD(1.0, 2f, 3d);
+		calculateD(a, b, c);
+		calculateX1();
+		calculateX2();
+		printAnswer();
+	}
+	
+	public static void calculateD(double a, double b, double c){
+		double d;
+		d = b*b -4*a*c;
+	}
+	
+	private static void printAnswer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void calculateX2(double a, double  b, double  d){
+		double x2;
+		x2 = (-b + Math.sqrt(d))/(2*a);
+	}
+
+
+	
+	public static void calculateX1(double a, double  b, double  d){
+		double x1;
+		x1 = (-b + Math.sqrt(d))/(2*a);
+	}
+	
+	
+}

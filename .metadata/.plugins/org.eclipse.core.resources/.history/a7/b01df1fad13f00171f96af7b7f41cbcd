@@ -1,0 +1,18 @@
+package homeworks;
+
+public class Coordinates {
+	
+	public static void main(String[] args) {
+		int x = 3, y = 4;
+		System.out.println("^");
+		for (int i = 10; i>0; i--){
+			System.out.println("|");
+			if (y == i){
+				//выводим Х:
+				
+			}
+		}
+		System.out.println("|--------------->");
+	}
+	
+}

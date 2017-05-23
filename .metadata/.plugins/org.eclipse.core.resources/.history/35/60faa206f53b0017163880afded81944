@@ -1,0 +1,13 @@
+
+public class Zagadka {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	private static int someMethod(){
+		
+		return 0;
+	}
+
+}

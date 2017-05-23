@@ -1,0 +1,20 @@
+package gui;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TestFrame {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Calculator");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 300);
+		JPanel panel = new JPanel();
+		JButton button1 = new JButton("Click me =]");
+		panel.add(button1);
+		frame.add(panel);
+		frame.setVisible(true);
+	}
+
+}

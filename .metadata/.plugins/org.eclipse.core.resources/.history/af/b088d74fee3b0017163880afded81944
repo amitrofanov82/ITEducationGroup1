@@ -1,0 +1,32 @@
+
+public class OtherMethods {
+	
+	public static void main(String[] args) {
+		int a=2, b=2, c=2;
+		
+		calculateD();
+		calculateX1();
+		calculateX2();
+		printAnswer();
+	}
+	
+	private static void printAnswer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void calculateX2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void calculateD(){
+		
+	}
+	
+	public static void calculateX1(){
+		
+	}
+	
+	
+}

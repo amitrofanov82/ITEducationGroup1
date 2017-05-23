@@ -1,0 +1,16 @@
+
+public class OtherMethods {
+	
+	public static void main(String[] args) {
+		int a=2, b=2, c=2;
+		
+		calculateD();
+		calculateX1();
+		calculateX2();
+		printAnswer();
+	}
+	
+
+	
+	
+}

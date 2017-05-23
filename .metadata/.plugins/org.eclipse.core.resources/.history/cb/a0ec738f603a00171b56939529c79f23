@@ -1,0 +1,20 @@
+
+public class Draft {
+    
+    public static void main(String[] args) {
+    	if (1+1==2){
+    		double d = 0.1;
+    		d =2+2;
+    		d =1/d;
+    		while (!false){
+    			d = d+d;
+    		}
+    	}
+    	//d = 654;
+    	//System.out.println(d);
+
+    	
+    }
+
+
+}
