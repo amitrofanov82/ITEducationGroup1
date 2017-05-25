@@ -3,7 +3,7 @@ package teacher.homework.lesson8;
 public class ProstyeChisla {
 	
 	public static void main(String[] args) {
-		int N = 1001000000;
+		int N = 41;
 		
 		for (int chisloKandidat = 2; chisloKandidat<=N; chisloKandidat++){
 			boolean isKandidatSimple = true; //talk about memory
