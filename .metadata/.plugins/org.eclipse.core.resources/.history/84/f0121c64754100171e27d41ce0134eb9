@@ -1,0 +1,11 @@
+package examples;
+
+public class InputExample {
+	public static void main(String[] args) {
+		char inChar;
+		int  inInt;
+		double inDouble;
+		
+		
+	}
+}

@@ -1,0 +1,13 @@
+
+public class Massivy {
+
+	public static void main(String[] args) {
+		//объявление переменных
+		int a, b, c[];
+		int[] d, e, f;
+		//инициализация
+		int[] g = {2, 3, 4, 17};
+		int[] h = new int[10000]; //заполнен нулями
+	}
+
+}

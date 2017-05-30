@@ -3,7 +3,7 @@ public class DragonBlankForItStep {
 	// Это будет следующей новой темой. Сейчас не нужно:
 	private static int healthD;
 	//public static int initHealthD; //так не стоит тут делать
-	public final static int DRAGON_INIT_HEALTH = 200; 
+	public final static int DRAGON_INIT_HEALTH = 200; //так не стоит тут делать
 	private static int atackD = 5;
 	private static int healthK;
 	private static int atackK;

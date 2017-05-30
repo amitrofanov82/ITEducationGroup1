@@ -1,0 +1,12 @@
+package examples;
+
+public class InputExample {
+	public static void main(String[] args) {
+		char inChar;
+		int  inInt;
+		double inDouble;
+		
+		System.out.println("message to out");
+		System.err.println("message to err");
+	}
+}
