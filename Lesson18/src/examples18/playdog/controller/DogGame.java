@@ -1,7 +1,8 @@
 package examples18.playdog.controller;
 
 import java.util.Scanner;
-import examples18.playdog.model.Dog;
+
+import examples19.incapsulation.Dog;
 
 public class DogGame {
 	

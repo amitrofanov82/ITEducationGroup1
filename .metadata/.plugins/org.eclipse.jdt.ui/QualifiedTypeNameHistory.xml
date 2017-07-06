@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollPaneUI"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollBarUI"/>
 <fullyQualifiedTypeName name="org.omg.Messaging.SyncScopeHelper"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>
