@@ -15,17 +15,17 @@ public class TaskResolver {
 		
 		String answer = resolveTask(N, R, O, Y, G, B, V);
 		
-		return "answer is " + answer;
+		return answer;
 	}
 
 	private static String resolveTask(int N, int R, int O, 
 			int Y, int G, int B, int V) {
 		//
 		char stoilo[] = new char[N];
-		if (R>Y && R>B){
+		if (R>=Y && R>=B){
 			stoilo[0]='R';
 			R--;}
-		else if (Y>R && Y>B) {
+		else if (Y>R && Y>=B) {
 			stoilo[0]='Y';
 			Y--;
 		} else{
@@ -66,6 +66,15 @@ public class TaskResolver {
 				return "IMPOSSIBLE";
 			}
 		}
+		if (stoilo[stoilo.length-1] == stoilo[0]) {
+			char temp = stoilo[stoilo.length-1];
+			stoilo[stoilo.length-1] = stoilo[stoilo.length-2];
+			stoilo[stoilo.length-2] = temp;
+			if (stoilo[stoilo.length-2] == stoilo[stoilo.length-3]){
+				return "IMPOSSIBLE";
+			}
+		}
+		
 		if (stoilo[0] == stoilo[stoilo.length-1]) {
 			return "IMPOSSIBLE";
 		}
