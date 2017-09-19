@@ -24,3 +24,23 @@ public interface ShagoSet<SOME_TYPE> {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
