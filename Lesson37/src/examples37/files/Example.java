@@ -9,9 +9,15 @@ import java.io.OutputStream;
 public class Example {
 	
 	public static void main(String[] args) throws IOException {
-		File f = new File ("d:/Mitrofanov/primer.exe");
+		File f = new File ("d:/Mitrofanov/primer.txt");
 		OutputStream out = new FileOutputStream(f, true);
-		out.write(65);
+		for (int i = 0; i<26; i++){
+			out.write(65+i);
+		}
+
+		//out.close();
+		
+		
 	}
 
 }
