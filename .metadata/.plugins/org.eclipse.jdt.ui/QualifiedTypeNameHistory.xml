@@ -51,4 +51,5 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="examples41.enums.enums.SeasonEnum"/>
 </qualifiedTypeNameHistroy>
