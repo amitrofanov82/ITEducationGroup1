@@ -43,7 +43,7 @@
 		<item value="110" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="completion_proposal_size">
-		<item value="608" key="size.y"/>
+		<item value="427" key="size.y"/>
 		<item value="1032" key="size.x"/>
 	</section>
 	<section name="AddGetterSetterDialog">

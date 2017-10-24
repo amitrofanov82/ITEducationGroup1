@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="examples17.utils.MyFavoriteUtils"/>
-<fullyQualifiedTypeName name="examples18.playdog.model.Dog"/>
-<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollPaneUI"/>
-<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollBarUI"/>
-<fullyQualifiedTypeName name="org.omg.Messaging.SyncScopeHelper"/>
-<fullyQualifiedTypeName name="shapes.Treugolnik"/>
-<fullyQualifiedTypeName name="shapes.PriamTreg"/>
-<fullyQualifiedTypeName name="ChessNew.Piece"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="Home23.tetris.Field"/>
 <fullyQualifiedTypeName name="Home23.tetris.Figure"/>
@@ -52,4 +44,20 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="examples41.enums.enums.SeasonEnum"/>
+<fullyQualifiedTypeName name="examples41.app1.viewswing.NotepadFrame"/>
+<fullyQualifiedTypeName name="examples41.app1.model.Notepad"/>
+<fullyQualifiedTypeName name="examples41.app1.model.NoteEnum"/>
+<fullyQualifiedTypeName name="java.awt.Button"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="java.awt.Frame"/>
+<fullyQualifiedTypeName name="java.awt.FileDialog"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
+<fullyQualifiedTypeName name="app.notepad.model.Notepad"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
 </qualifiedTypeNameHistroy>
