@@ -45,6 +45,15 @@ public class Road extends JPanel implements ActionListener, Runnable  {
 		public void keyReleased(KeyEvent e) {
 			p.keyReleased(e);
 		}
+		@Override
+		public void keyTyped(KeyEvent e) {
+			System.out.print(e.getKeyChar());
+			if (e.isControlDown() /*&& e.getKeyCode() == 0x45*/) {
+				System.out.println("ctrl pressed");
+			}
+			
+		}
+		
 		
 	}
 	

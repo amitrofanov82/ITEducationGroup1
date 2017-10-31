@@ -1,6 +1,6 @@
 MemberFilterActionGroup.org.eclipse.jdt.ui.JavaOutlinePage.1=true
 content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="shapes.Shape"><rhs name\="shapes.Treugolnik"/></lhs><lhs name\="shapes.Treugolnik"><rhs name\="shapes.Treugolnik"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.Component"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.Button"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.LayoutManager"><rhs name\="java.awt.BorderLayout"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="shapes.Shape"><rhs name\="shapes.Treugolnik"/></lhs><lhs name\="shapes.Treugolnik"><rhs name\="shapes.Treugolnik"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.Component"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.Button"><rhs name\="java.awt.Button"/></lhs><lhs name\="java.awt.LayoutManager"><rhs name\="java.awt.BorderLayout"/></lhs><lhs name\="java.awt.Paint"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Transparency"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Color"><rhs name\="java.awt.Color"/></lhs></history>
 content_assist_number_of_computers=24
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
@@ -15,7 +15,7 @@ org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.templates_migrated=true
-org.eclipse.jface.textfont=1|Courier New|24.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+org.eclipse.jface.textfont=1|Courier New|28.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
 proposalOrderMigrated=true
 spelling_locale_initialized=true
 tabWidthPropagated=true
