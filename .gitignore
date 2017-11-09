@@ -1,2 +1,6 @@
 .metadata
 **/bin
+eclipse_neon3
+**/target
+.recomenders
+
