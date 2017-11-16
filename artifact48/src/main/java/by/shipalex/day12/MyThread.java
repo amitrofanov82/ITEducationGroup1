@@ -7,9 +7,11 @@ public class MyThread extends Thread {
         setName(name);
     }
 
-    public void run() {
+    public void run1() {
         for (int i = 0; i < 71; i++) {
             System.out.println(getName() + " " + i);
+            //Thread t444 = new Thread(new MyOwnRunnableImplementation());
+            //t444.start();
             try {
                 sleep(1); //попробовать sleep(0) и yield();
             } catch (InterruptedException e) {
@@ -18,7 +20,7 @@ public class MyThread extends Thread {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         MyThread min = new MyThread("Min"); //1
         MyThread max = new MyThread("Max"); //10
         MyThread norm = new MyThread("Norm"); //5
@@ -28,6 +30,7 @@ public class MyThread extends Thread {
         min.start();
         norm.start();
         max.start();
+        //System.out.println(norm.getName());
     }
 
     public void run2() {
@@ -56,23 +59,25 @@ public class MyThread extends Thread {
         tr1.start();
         tr2.start();
         try {
-            tr1.join();
-            System.out.println("завершение main");
-        } catch (InterruptedException e) {
+            //tr1.join();
+            System.out.println("Последняя команда main");
+        } catch (Exception e) {
             e.printStackTrace();
         }
         /* join() не дает работать потоку  main до окончания выполнения
     потока tr1 */
     }
 
-    public static void main3(String[] args) {
-        new Thread() {
+    public static void main(String[] args) {
+        Object t = new Thread() {
+        	@Override
             public void run() {
                 System.out.println("старт потока 1");
                 Thread.yield();
                 System.out.println("завершение 1");
             }
-        }.start();
+        };
+        ((Thread)t).start();
         new Thread() {
             public void run() {
                 System.out.println("старт потока 2");
