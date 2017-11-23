@@ -14,10 +14,14 @@ public class Customer {
 			Product choice = stock.getRandomProd();
 			goods.put(choice, 1);
 		}
+		System.out.println("Customer " + this.id
+				+ " набрал товаров " + goods.size()
+				+ " штук.");
 	}
 
 	public void chooseCashBox(List<CashBox> cashBoxes) {
 		int min = cashBoxes.get(0).getQueueSize();
+		CashBox chosenBox = cashBoxes.get(0);
 		for (CashBox c : cashBoxes) {
 			if (c.getQueueSize() == 0) {
 				c.addCustomerToQueue(this);
@@ -25,8 +29,10 @@ public class Customer {
 			}
 			if (c.getQueueSize() < min) {
 				min = c.getQueueSize();
+				chosenBox = c;
 			}
 		}
+		chosenBox.addCustomerToQueue(this);
 	}
 
 	public Map<Product, Integer> getGoods() {

@@ -10,11 +10,12 @@ public class ProStore {
 	public ProStore(){
 		stock = new Stock();
 		cashBoxes = new ArrayList<>(3);
-		for (int i =0; i<1; i++){
+		for (int i =0; i<4; i++){
 			CashBox c = new CashBox();
 			cashBoxes.add(c);
 			c.start();
 		}
+		System.out.println("Магазин открылся");
 	}
 	
 	public void newCustomerReadyToBuy(Customer cust) throws Exception {
