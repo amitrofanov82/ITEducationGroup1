@@ -12,9 +12,15 @@ public class ProblemExample extends Thread{
 		t1.start();
 		Thread t2 = new ProblemExample();
 		t2.start();
-		for (long i=0; i<60000000L; i++){
+		for (long i=0; i<60000000000L; i++){
 			synchronized(GUARDIAN1){
-				sharedResource++;
+				//while (true) {
+					sharedResource++;
+					//GUARDIAN1.notify();
+					//GUARDIAN1.wait();
+					//GUARDIAN1.notifyAll();
+					//sharedResource++;
+				//}
 			}
 		}
 		t1.join();
@@ -24,7 +30,7 @@ public class ProblemExample extends Thread{
 	
 	@Override
 	public void run() {
-		for (long i=0; i<50000000L; i++){
+		for (long i=0; i<50000000000L; i++){
 			//synchronized(GUARDIAN1){
 			synchronized(GUARDIAN2){
 				sharedResource++;
