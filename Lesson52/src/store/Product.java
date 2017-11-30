@@ -34,3 +34,25 @@ public class Product {
 	return "Product № " + vendorCode + ". Price: " + price;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
