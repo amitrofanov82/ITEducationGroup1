@@ -6,11 +6,25 @@ body {
 	font-size: 25;
 }
 
+strong {
+	background-color: yellow;
+	width: 150px;
+	height: 150px;
+}
+
 h1 {
 	text-decoration: none;
 	text-decoration: overline;
 	text-transform: uppercase;
 	color: 'purple';
+	background-color: yellow;
+	width: 50%;
+	min-width: 250px;
+	max-width:350px; 
+	height: 150px; /* auto */
+	
+	
+	
 }
 
 table {
@@ -49,3 +63,5 @@ ul li {
 ul .bruceLi {
 	background-color: yellow;
 }
+
+
