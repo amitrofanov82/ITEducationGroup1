@@ -22,7 +22,8 @@ body {
 
 blockquote, q {
 	quotes: none;
-	display: block; /*inline, block-inline, inline-table, none
+	display: block; /*inline, block-inline, inline-table, none ...*/
+	visibility: hidden;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
