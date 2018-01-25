@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+
+/* Секция сброса параметров по умолчанию */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%;
+	vertical-align: baseline; background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: ''; content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+
+del {
+text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: collapse; border-spacing: 0;
+}
+
+/* Конец сброса параметров по умолчанию, начало секции базовых элементов шаблона */
+html {
+	//height:100%;
+	//background: url("../images/html_bckgr.png") repeat-y;
+	//background-size: 100%;
+}
+
+body{
+//	height:500%;
+//	background: url("../images/body_bckgr.jpg") no-repeat;
+//	background-size: 100%;
+	min-width: 854px;
+	font-size: 100%;
+}
+
+
+/* Конец секции базовых элементов шаблона, начало секции описания классов */
+
+
+/* Конец секции описания классов, начало секции описания id */
+#header {
+	height: 193px;
+	background: url(../images/header.png) no-repeat 0 0 yellow;
+}
+
+#under_header_line{
+	height:31px;
+	background: green;
+	border-bottom: 1px dotted black;
+	margin: 0 40px;
+}
+
+
+

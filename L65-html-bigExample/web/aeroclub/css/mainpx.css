@@ -1,0 +1,405 @@
+@CHARSET "UTF-8";
+
+/* Секция сброса параметров по умолчанию */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%;
+	vertical-align: baseline; background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+/*ol,*/ ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+	display: block; /*inline, block-inline, inline-table, none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: ''; content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+
+del {
+text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: collapse; border-spacing: 0;
+}
+
+/* Конец сброса параметров по умолчанию, начало секции базовых элементов шаблона */
+html {
+	height:100%;
+	background: url("../images/html_bckgr.jpg");
+	background-size: 100%;
+}
+
+body{
+	height:100%;
+	background: url("../images/body_bckgr_top.jpg") no-repeat top, url("../images/body_bckgr_bot.jpg") no-repeat bottom;
+	background-size: 100%;
+	min-width: 850px;
+	font-size: 12px;
+	font-family: "verdana", "tahoma", "arial",   sans-serif, "Lucida Sans";
+	line-height: 1.4;
+}
+
+a, a:visited {
+	color: #0a316a;
+}
+
+
+/* Конец секции базовых элементов шаблона, начало секции описания классов */
+
+
+/* Конец секции описания классов, начало секции описания id слоёв разметки */
+#header {
+	height: 193px;
+	background: url(../images/header.png) no-repeat 0 0;
+}
+
+#header_right {
+	float:right;
+	width: 300px;
+	height: 38px;
+	//background: blue;
+}
+
+#under_header_line{
+	height:30px;
+	border-bottom: 1px dotted black;
+	margin: 0 40px;	
+}
+
+#contentwrapper{
+	margin: 22px 40px 0 40px;
+	overflow: hidden;	
+	min-height: 70%;
+}
+
+#columnwrapper{
+	float:left;
+	width:100%;
+}
+
+#centercolumnwrapper{
+	margin: 0 224px;
+}
+
+#leftcolumn{
+	width: 224px;
+	float: left;
+	margin-left: -100%;
+}
+
+
+#rightcolumn{
+	width: 224px;
+	float: left;
+	margin-left: -224px;
+}
+
+
+#centercolumncontent{
+	margin: 0 6%;
+}
+
+#maincontent{
+	width: 100%;
+	//padding-left: 15px;
+	//padding-right: 15px;
+}
+
+#leftbottomcolumn{
+	width: 50%;
+	float: left;
+}
+
+#rightbottomcolumn{
+	width: 50%;
+	float: right;
+}
+
+
+#prefooter{
+
+	margin: 0 40px;	
+	border-top: 1px dotted black;
+	margin-top: 15px;
+	min-height: 1px;
+}
+
+#prefooter .moduletable {
+	margin: 0 87px;	
+}
+
+
+#footer{
+	height:10px;
+}
+
+.clearance{
+height: 0;
+clear: both;
+}
+
+#prefooterline{
+height: 15px;
+background: url(../images/linijaniz.png) repeat-x;
+margin-top: 15px;
+}
+
+
+
+/*-------elements decoration---------------------------*/
+ol {
+	text-indent: 0;
+}
+
+.item-page p {
+	text-indent: 1em;
+}
+
+
+h1, h2, .item-page h2, .blog h2, .blog-featured h2, .blog .items-row h2 {
+	width:100%;
+	font-size: 200%;
+	color: #970909;
+	font-weight: 200;
+	text-indent: 1em;
+	border-bottom: 1px dotted black;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+h2 a, h2 a:visited{
+	color: #970909;
+	text-decoration: none;
+}
+
+.moduletable_announce h3, h3 a, h3 a:visited {
+	color: #970909;
+	text-decoration: underline;
+	font-size: 101%;
+	margin-bottom: 3px;
+}
+
+h3, h4 {
+
+	color: #970909;
+	font-size: 101%;
+	margin-bottom: 3px;
+	margin-top: 15px;
+}
+
+.moduletable_announce{
+	margin-bottom: 15px;
+}
+
+.moduletable_aeromenu{
+	margin-bottom: 15px;
+}
+
+
+.mod-articles-category-introtext{
+	font-style: normal;
+}
+
+.mod-articles-category-readmore{
+	margin-bottom: 11px;
+	padding-bottom: 4px;
+	border-bottom: 1px dotted black;
+	font-style: italic;
+}
+
+.moduletable_aerohumor {
+	margin-top: 25px;
+	font-style: italic;
+}
+
+
+/*.blog-featured h2, blog featured h2 a, .blog .items-row h2, .blog .items-row h2 a{
+	color: #970909;
+	text-decoration: underline;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	border:0;
+	font-size: 110%;
+}*/
+
+#centercolumncontent h2::after{
+	content: '';
+}
+
+.item-page{
+	//text-indent: 1em;
+	
+}
+
+.custom_aerologin, .moduletable_aerologin {
+	height: 100%;	
+	position: relative;	
+}
+
+.custom_aerologin a{
+	color: #3f3e3c;
+	position: absolute;
+	bottom: 7px;
+	left: 36px;		
+}
+
+.title{
+	padding-top: 15px;
+}
+
+/*-------modules overload---------------------------*/
+
+.ux-menu-item-main {
+	height: 35px;
+	width:224px;
+	margin-bottom: 4px;
+	background: url(../images/menu_button.png) no-repeat;	
+}
+
+.ux-menu-item-main:hover {
+	height: 35px;
+	width:224px;
+	background: url(../images/menu_button_hover.png) no-repeat;	
+}
+
+.ux-menu-item-main a{
+	border: 0 !important;
+	background:transparent !important; 
+	color: #fefefe;
+	font-size: large;
+}
+
+.ux-menu-item-level-1 {
+	height: 28px;
+	width:120px;
+	background: #ffdd4d;
+}
+
+.ux-menu-item-level-1 a{
+	color: black;
+}
+
+/*------ SIGPLUS picture gallery overload (main page) */
+
+.sigplus-gallery .boxplus-carousel .boxplus-viewport ul{
+text-align: left !important;
+}
+
+.sigplus-gallery .boxplus-carousel .boxplus-paging .boxplus-prev,  .sigplus-gallery .boxplus-carousel .boxplus-paging .boxplus-prev:hover{
+position: relative !important;
+left: -57px !important;
+top: -98px !important;
+width: 31px !important;
+height: 48px !important;
+background: url(../images/strelkalevo.png) no-repeat!important;
+
+}
+
+.sigplus-gallery .boxplus-carousel .boxplus-paging .boxplus-next, .sigplus-gallery .boxplus-carousel .boxplus-paging .boxplus-next:hover{
+position: relative !important;
+left: 60px !important;
+top: -146px !important;
+background: url(../images/strelkapravo.png) !important;
+width: 31px !important;
+height: 48px !important;
+float: right;
+clear: both;
+}
+
+.boxplus-paging{
+height: 0;
+}
+
+[align] {
+	/*...*/
+}
+
+[align=center] {
+	/*...*/
+}
+
+[href^="http"] {
+	/*...*/
+}
+
+[href*="tut.by"] {
+	/*...*/
+}
+
+p.classname{
+	
+}
+
+[href*="tut.by"] h2 {
+	
+}
+
+h1 + h2 {	
+}
+
+h1 ~ h2 {
+	
+}
+
+div :first-child{
+	
+}
+
+p:last-of-type{
+	
+}
+
+:active{
+	border: solid red 3px; 
+}
+
+div:not(#header){
+	
+}
+
+p::before{
+	
+}
+
+p::after{
+	content: url('https://dh.img.tyt.by/i/tr.gif');
+	content: attr('align');
+	content: counter(imyaSchetchika) attr('align');
+}
+
+p.tutby {
+	/*content: 'coderжимое из ЦСС';
+	content: url('https://dh.img.tyt.by/i/tr.gif');*/
+	
+}
+
+p::first-line {
+	
+}
