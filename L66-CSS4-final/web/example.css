@@ -1,0 +1,25 @@
+body {
+	padding-left: 100px;
+	min-height: 300%; 
+}
+
+#siteHeader {
+	
+}
+
+#paragraph1 {
+	/*position: static relative fixed absolute inherite*/
+	position: relative;
+	left: 50px;
+	top:5px;
+	color:red;
+	z-index: 100;
+}
+
+.commonContainer{
+	position: relative;
+	z-index: 101;
+}
+
+
+

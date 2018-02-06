@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function replace(massiv, i, j){
+			var temp = massiv[i];
+			massiv[i]=massiv[j];
+			massiv[j]=temp;
+		}
+	</script>
+	<script type="text/javascript">
+		function kolbasa(){
+			var a=4;
+			var b=10, c;
+			c=-20.0;
+			var d=b*b-4*a*c;
+			var x1=(-b+Math.sqrt(d))/(2*a);
+			var x2=(-b-Math.sqrt(d))/(2*a);
+			c="x2+";
+			console.log("x1="+x1);
+			console.log(c+x2);
+			console.log("=======================");
+			console.log(1+true+true-false);
+			console.log(1>=true);
+			console.log(true!="привет");
+			console.log(-4>"-10");
+			console.log(-1+true);
+			console.log("A"<"B");
+			console.log("A"<"BC");
+			console.log("Б"<"В");
+			
+			var massiv = ["AL",-2000, 2000, ,2,3,"Лёша",7,"Саша"
+				,"8123",true,10];
+			for (var i=0; i<massiv.length; i++){
+				for(var j=i; j<massiv.length; j++){
+					if (massiv[i]>massiv[j]) {
+						replace(massiv, i, j);
+					}
+				}
+			}
+			console.log(massiv);
+			
+			/*console.log("привет мир!");*/
+			//alert("Привет пользователь");
+		}
+	</script>
+
+</head>
+
+
+<body>
+	<h1>Заголовок страницы</h1>
+	<button onclick="kolbasa();">Запусти колбасу</button>
+</body>
+
+	
+	
+</html>
+

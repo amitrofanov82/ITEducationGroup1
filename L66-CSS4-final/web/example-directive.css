@@ -1,0 +1,90 @@
+@import url(http://mySite/anotherCssFile.css) screen
+
+/*@media устройства and (доп.условие)*/
+@media screen, print and (max-device-width: 1080px;)
+@charset UTF-8
+@font-face 
+
+
+html {
+	style ="text-decoration: underline";
+}
+
+body {
+	text-align: center;
+	font-size: 25;
+}
+
+#siteHeader {
+	padding: 3px;
+	margin: 4px;
+	background-color: green;
+}
+
+strong {
+	background-color: yellow;
+	width: 150px;
+	height: 150px;
+}
+
+h1 {
+	text-decoration: none;
+	text-decoration: overline;
+	text-transform: uppercase;
+	color: 'purple';
+	background-color: yellow;
+	width: 50%;
+	min-width: 250px;
+	max-width:350px; 
+	height: 150px; /* auto */
+	max-height: 150px;
+
+	margin: 10px 10px 58px 20px;
+	padding: 5px 10px 25px 5px;
+	border: solid red 3px;
+
+	float: left;
+}
+
+div.clear {
+	clear: both;
+}
+
+table {
+	style ="font-size: 15";
+	color: '#00FF00';
+}
+
+ol {
+	style ="list-style-type: upper-roman";
+}
+
+#beautiful {
+	font: italic bold 60px/200% Yesteryear;
+}
+
+p#beautiful2 {
+	font-family: Arial;
+}
+
+.common {
+	color: green;
+}
+
+p.common {
+	color: navy;
+}
+
+ol li {
+	color: blue;
+}
+
+ul li {
+	color: red;
+}
+
+ul .bruceLi {
+	background-color: yellow;
+}
+
+

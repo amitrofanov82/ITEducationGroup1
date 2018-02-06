@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+.triangle
+{
+      position: absolute;
+      right: 100%;
+      top: 12px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid lightgreen;
+      border-bottom: 13px solid transparent;
+}
+</style>
+
+<style>
+
+    /* радиокнопки скрыты */
+    input.SRadioFolder
+    {
+        display: none;
+    }
+
+    /* но их метки видны и выстраиваются в линейку */
+    input.SRadioFolder + label
+    {
+        float: left;
+        background-color: #aaaaaa;
+        display: block;
+        margin-right: 5px;
+        padding: 0 10px 0 10px;
+        border-radius: 10px 10px 0 0;
+        line-height: 2em;
+    }
+
+    /* самая первая метка - с отступом слева */
+    input.SRadioFolder:first-child + label
+    {
+        margin-left: 10px;
+    }
+
+    /* метка выбранной радиокнопки - голубой фон */
+    input.SRadioFolder:checked + label
+    {
+        background-color: cyan;
+    }
+
+    /* все контенты обычно не видны */
+    input.SRadioFolder + label + div
+    {
+        display: none;
+    }
+
+    /* контент выбранной радиокнопки виден */
+    input.SRadioFolder:checked + label + div
+    {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2em;
+        min-width: 20em;
+        background-color: cyan;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+
+<div style='position: relative'>
+
+    <input type=radio name=FOLDER id=FOLDER1 checked class='SRadioFolder'>
+    <label for=FOLDER1>первая строфа</label>
+    <div class='SFolderDiv'>
+        Однажды в студёную зимнюю пору<br />
+        Я из лесу вышел &mdash; был сильный мороз!
+    </div>
+
+    <input type=radio name=FOLDER id=FOLDER2 class='SRadioFolder'>
+    <label for=FOLDER2>вторая и третья строфа</label>
+    <div class='SFolderDiv'>
+        Гляжу &mdash; поднимается медленно в гору<br />
+        лошадка, везущая хворосту воз.<br />
+        И шествуя рядом, в спокойствии чинном,<br />
+        Лошадку ведёт под уздцы мужичок.
+    </div>
+
+</div> 
+
+
+<div class="triangle">
+	hjagjkdg
+</div>
+
+
+</body>
+</html>
