@@ -1,0 +1,64 @@
+С ES-2015 предусмотрены новые способы объявления переменных: через let и const вместо var.
+	- взято с https://learn.javascript.ru/let-const
+
+let:
+	- Область видимости переменной let – блок {...}. (var видна везде в функции, в том числе за пределами блоков где объявлена)
+	- Переменная let видна только после объявления. (var будет=Undefined)
+	- let нельзя повторно объявлять в той же области видимости
+	
+	Пример:
+	
+	for(var i=0; i<10; i++) { /* … */ } vs for(let i=0; i<10; i++) { /* … */ }
+	alert(i); // 10
+
+const:
+	- как final в java, область видимости как let
+	
+==========================================
+2. Все операторы:
+https://javascript.ru/manual/operator
+
+==========================================
+3. Управляющие операторы (не все):
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements
+и
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators
+
+Инкремент и декремент
+, - позволяет вычислять несколько выражений в одном операторе и возвращает результат вычисления последнего выражения.
+
+циклы - всё как в джаве (for do...while while) (https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/%D0%A6%D0%B8%D0%BA%D0%BB%D1%8B_%D0%B8_%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8)
+	+ Метка_(label) (хотя в джаве тоже есть, но никто не помнит)
+	+ for...in (аналог джавовского for each)
+	+ for...of
+	
+for (let i in arr) {
+   console.log(i); // выводит "0", "1", "2", "foo"
+}
+
+for (let i of arr) {
+   console.log(i); // выводит "3", "5", "7"
+}
+
+	
+Условия - тернарный и иф как в джаве. select Case немного другой:
+	
+
+Деструктурирующее присваивание:	
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment	
+	
+Сокращенная инициализация массивов:
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Array_comprehensions
+	
+4. ДОМ введение. Пример - рисуем синус на канвасе. 
+
+5. По функциям:
+
+Функция - это объект.
+new Function('x', 'текст');
+
+ async function* -  больше об этом при Аджаксе.
+
+Замыкания, особенности this и прочие особенностями с функциями - через неделю.
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions
+	
