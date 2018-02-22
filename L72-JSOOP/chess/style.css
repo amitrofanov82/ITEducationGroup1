@@ -1,0 +1,20 @@
+
+#chess-board{
+	margin: 20px;
+	padding: 5px;
+}
+
+.square{
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+}
+.figure{
+	min-width: 50px;
+	min-height: 50px;
+}
+.corditeate{
+	text-align: center;
+	font-weight: bold;
+	padding: 2px 5px 2px 5px;
+}

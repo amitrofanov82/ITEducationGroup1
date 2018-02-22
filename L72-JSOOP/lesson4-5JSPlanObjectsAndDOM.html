@@ -1,0 +1,60 @@
+<html><script>
+var showMessage2=5;
+showMessage();
+//showMessage2(); //error
+
+function showMessage(from, text) {
+  text = text || 'no text'; //
+  console.log(from+text);
+}
+
+showMessage2 = function (from, text) {
+	  text = text || 'no text'; //
+	  console.log(from+text);
+}
+
+showMessage2(); //ok
+
+
+function doCommands(f1,f2,f3) {
+	f1();
+	f2();
+	f3();
+}
+
+doCommands(function (){
+	var a=0;
+	var b=3;
+	return b/a;
+}, showMessage, showMessage2);
+
+var f4 = new Function('a,b', ' return a+b; ');
+
+</script>
+
+<body onclick="alert(5/0)">
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
