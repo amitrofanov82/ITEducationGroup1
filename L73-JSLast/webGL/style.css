@@ -1,0 +1,17 @@
+body{
+	background-repeat: no-repeat;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/WebGL_Logo.svg/800px-WebGL_Logo.svg.png);
+	background-size: cover;
+}
+#glCanvas{
+	margin: 50px;
+	position: fixed;
+}
+
+#turnOnRotating{
+	margin: 10px;
+	position: fixed;
+	width: 250px;
+	height: 30px;
+	top: 570px;
+}
