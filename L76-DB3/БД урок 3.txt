@@ -1,0 +1,114 @@
+Полное содержание книги как список тем. 
+Книга хоть и старая, некоторые типы и обновления стандарта там упущены, но хорошая. 
+Только на русском  корявый перевод. 
+http://www.sql.ru/docs/sql/u_sql/
+
+Задача - делаем БД для шахмат.
+
+-------------------
+Пользователь.
+
+
+-------------------
+Типы данных: 
+ANSI SQL стандарт распознает только текст и числа. Все остальные типы могут отличаться в названиях в разных СУБД. 
+
+Но по сути - текст, целое число, число с плавающей точкой, дата, время (с таймзоной и без), 
+Не везде, но много где - MONEY, BINARY, boolean...
+
+Основные стандартные типы:
+INTEGER, DECIMAL (можно сокращать как INT и DEC, соответственно)
+CHAR - несмотря на название, имеется в виду строка некоторой фикисрованной длины. 
+VARCHAR. Нестандартный, но общепринятый. Различие между CHAR и VARCHAR в том, что CHAR должен резервировать достаточное количество памяти для максимальной длины строки, а VARCHAR распределяет память так как это необходимо. 
+
+Плюс несколько ещё, перечислены на странице ниже:
+
+Для постгре - https://www.postgresql.org/docs/10/static/datatype.html  перечислено в табличке.
+
+Те специфические типы данных, которые не имеют однозначного представления в виде текста в разных базах могут иметь разные принципы ввода их значения как текста внутри SQL команды. Часто для этого используют функции, которые можно использовать внутри SQL выражения:
+
+чаще всего этот вопрос всплывает, когда надо ввести какую-нибудь дату-время. 
+Для постгре примеры таких поддерживаемых форматов ввода и функций	 тут:
+https://www.postgresql.org/docs/10/static/datatype-datetime.html#DATATYPE-DATETIME-INPUT
+https://www.postgresql.org/docs/10/static/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT
+
+И полный список функций:
+https://www.postgresql.org/docs/10/static/functions.html
+
+для времени самые популярные timestamp с зоной и без.
+
+
+//-----------
+Запросы Селект с функциями и вычислениями:
+Итого полный синтаксис (заодно учимся читать такую нотмацию): 
+[WITH ...] SELECT [DISTINCT [ON (expression [, ...] )] ] select_list FROM ... [WHERE ...] [GROUP BY ... [HAVING boolean_expression] ]
+хэвинг не входит в стандарт, но встречается не только в постгрес.
+
+Примеры:
+SELECT a, b + c FROM table1;
+SELECT 3 * 4;
+SELECT random();
+SELECT count(*) from table1;
+
+что может быть внутри FROM:
+вложенные запросы:
+SELECT * FROM (SELECT * FROM ( SELECT * FROM ... WHERE ...) WHERE ... ) WHERE ...
+Несколько таблиц (cross-join, запустить на уроке):
+SELECT * FROM table1, table2 
+
+С объеденением JOIN
+
+группировка:
+SELECT x, sum(y) FROM test1 GROUP BY x;
+
+
+
+
+
+
+---------------
+Объеденения и именование таблиц в запросе, пример:
+    SELECT product_id, p.name, (sum(s.units) * p.price) AS sales
+    FROM products p LEFT JOIN sales s USING (product_id)
+    GROUP BY product_id, p.name, p.price;
+
+Объеденения бывают:
+T1 { [INNER] | { LEFT | RIGHT | FULL } [OUTER] } JOIN T2 ON boolean_expression
+T1 { [INNER] | { LEFT | RIGHT | FULL } [OUTER] } JOIN T2 USING ( join column list )
+T1 NATURAL { [INNER] | { LEFT | RIGHT | FULL } [OUTER] } JOIN T2
+T1 CROSS JOIN T2
+
+FROM T1 CROSS JOIN T2 is equivalent to FROM T1 INNER JOIN T2 ON TRUE
+
+
+------------
+Ограничения целостности (Constraints):
+https://www.postgresql.org/docs/10/static/ddl-constraints.html
+
+И примеры все оттуда же.
+
+
+Задача - на примере женатых людей с первого урока сделать так, чтоб одна семейная пара 2 раза не хранилась. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
