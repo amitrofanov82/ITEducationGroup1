@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://java.sun.com/xml/ns/javaee" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+  version="3.0">
+  
+  
+  <display-name>Contacts</display-name>
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+    <welcome-file>/zapasnoJ.HTM</welcome-file>
+    
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>contactServlet</servlet-name>
+  	<servlet-class>com.simple.contact.controller.ContactController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>contactServlet</servlet-name>
+  	<url-pattern>/contacts</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>importServlet</servlet-name>
+  	<servlet-class>com.simple.contact.controller.ImportController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>importServlet</servlet-name>
+  	<url-pattern>/import</url-pattern>
+  </servlet-mapping>
+</web-app>
