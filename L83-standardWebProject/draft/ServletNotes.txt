@@ -1,0 +1,54 @@
+1. https://tomcat.apache.org/tomcat-8.0-doc/servletapi/index.html
+(JEE тоже где-то есть, но вполне подходит и конкретная реализация конкретного сервера для документации)
+
+Там чуть больше, чем,на картинках: 
+	+ javax.servlet.annotation	- альтернатива web.xml 
+	+ javax.servlet.descriptor  - не нужно
+	
+Основное:
+javax.servlet - define the contracts between a servlet class and the runtime environment provided for an instance of such a class by a conforming servlet container.
+
+Основные классы\интерфейсы, в порядке важности (остальные по мере интереса и надобности):
+	Servlet
+	ServletConfig - берется из Servlet.getServletConfig(). Через такое поле сервер на старте дает объекту сервлета досутп к окружению. 
+	ServletContext - set of methods that a servlet uses to communicate with its servlet container
+	                 Один на все сервлеты. Можно считать "web application Context"
+					 (specific subset of the server's URL namespace such as /catalog)
+					 ServletContext object is contained within the ServletConfig
+					 Основной объект, получающийся в результате разбора web.xml
+					 Много методов обо всём, что касается веб-приложения в целом.
+	Filter
+	ServletRequest, HttpServletRequest - 
+					Все возможные параметры самого запроса
+					Доступ к сессии (для ХТТП)
+					Доступ к диспетчеру (см. ниже)
+					Доступ к хранилищу аттрибутов реквеста, которые можно добавлять и удалять по ходу дела. 
+					Для ХТТП ещё побольше всего, но смысл тот же. Больше информации об авторизации. 
+	
+	ServletResponse  - прежде всего содержит OutputStream, через который отправится ответ. + методы установки Хттп-заголовков.
+	RequestDispatcher - перенаправить запрос другому сервлету\странице, или включить результаты работы другого сервлета в ответ. 
+	HttpSession 
+	ServletContextListener - destroy/init lifecycle methods
+	Прочие листенеры. 
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

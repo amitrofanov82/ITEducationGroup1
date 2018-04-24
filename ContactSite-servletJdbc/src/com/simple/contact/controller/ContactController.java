@@ -17,8 +17,6 @@ import com.simple.contact.util.PaginationHelper;
 
 public class ContactController extends HttpServlet {
 
-	private static final long serialVersionUID = 4337315629536853275L;
-
 	private static final int DEFAULT_CONTACTS_COUNT_ON_PAGE = 14;
 
 	private static final String CONTACTS_PAGE_PATH = "WEB-INF/jsp/contacts.jsp";
@@ -52,3 +50,17 @@ public class ContactController extends HttpServlet {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

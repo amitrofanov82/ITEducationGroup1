@@ -1,0 +1,91 @@
+По сути просто метка. Используются для хранения метаданных программного кода, необходимых на разных этапах жизненного цикла программы. может использоваться соответствующими обработчиками как угодно.
+
+Синтаксис определения:
+
+import java.lang.annotation.*;
+
+
+
+@Inherited
+@Documented
+@Target(value=ElementType.FIELD)
+@Retention(value= RetentionPolicy.RUNTIME)
+public @interface mammal {
+	//параметры (синоним - аттрибуты, свойства, поля аннотации). Не обязательно они вообще должны быть.
+	String[] names(); //обязательное
+    String type() default  “string”; //необязательное
+	
+	//тут можно использовать только ограниченный набар типов: primitive, String, class, Enum, Other Annotation, Array of above.
+}
+
+4 стандартыне аннотации, применимые только к другим аннотациям:
+ 
+@Retention позволяет указать жизненный цикл аннотации. Читается компилятором. 
+Одно из трёх, см джавадок RetentionPolicy. Обязательная. 
+
+@Target указывает, что именно мы можем пометить этой аннотацией. См. Джавадок ElementType
+Видно, что и саму аннотацию можно пометить несколькими аннотациями. Обязательная. 
+
+@Documented - @Documented используется при объявлении другой аннотации чтобы указать, что данная аннотация будет указана в сгенерированной документации JavaDoc. 
+
+@Inherited - если мы пометим аннотацией, отмеченной этой аннотацией, какой нибудь класс, то и все наследники этого класса будут считаться отмеченные. Без нее аннотированность не наследуется. 
+
+====================
+Рефлексия (Reflection)
+
+При использовании аннотаций времени исполнения досутп к ним осущетсвляется через механизм Reflection, который поверхностно показан ниже в примере. 
+
+=============================
+Живой пример своей аннотации и её обработки:
+=============================
+
+@Target(value=ElementType.METHOD)
+@Retention(value= RetentionPolicy.RUNTIME)
+public @interface StartObject {    
+}
+
+@Target(value=ElementType.METHOD)
+@Retention(value= RetentionPolicy.RUNTIME)
+public @interface StopObject {    
+}
+
+@Target(value=ElementType.TYPE)
+@Retention(value= RetentionPolicy.RUNTIME)
+public @interface ControlledObject {    
+     String name();    
+}
+
+
+@ControlledObject(name="biscuits")
+public class Cookies {    
+    
+     @StartObject
+     public void createCookie(){
+       //бизнес логика
+     }    
+     @StopObject
+     public void stopCookie(){
+       //бизнес логика
+     }
+}
+
+main(){
+	Cookies cookies = new Cookies();
+	Class cl = cookies.getClass();
+	if(cl.isAnnotationPresent(ControlledObject.class)){
+		System.out.println("class annotated with annotatin name=" + cl.getAnnotation(ControlledObject.class));
+	} 
+	
+	Method[] method = cl.getMethods();
+	boolean hasStart=false;
+	boolean hasStop=false;        
+	Method[] method = cl.getMethods();
+	for(Method md: method){
+       if(md.isAnnotationPresent(StartObject.class)) {hasStart=true;}
+       if(md.isAnnotationPresent(StopObject.class)) {hasStop=true;}
+       if(hasStart && hasStop){break;}
+	}
+	System.out.println("Start annotaton  - " + hasStart + ";  Stop annotation  - " + hasStop );
+	
+}
+
