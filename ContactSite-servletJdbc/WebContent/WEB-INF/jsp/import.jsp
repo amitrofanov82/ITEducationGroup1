@@ -21,6 +21,12 @@
 			<input type="file" id="myFile" name="filePath" class="file">
 			<input type="submit" class="btn btn-default" value="Import">
 		</form>
+		<form action="import" method="get">
+			<input type="text" id="myText" name="myText" class="file">
+			<input type="submit" class="btn btn-default" value="Import">
+		</form>
+		
+		
 		<h2>${uploadMessage}</h2>
 		<br> <a class="btn btn-info"
 			href="${pageContext.request.contextPath}">On start page</a>
