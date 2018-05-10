@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Author author_id="1" name="Gogol" expired="2015-03-30 19:30:00" />
+	<Author author_id="2" name="Pushkin" expired="2015-03-30 19:30:00" />
+	<Author author_id="3" name="Dostoevski" expired="2015-03-30 19:30:00" />
+	<News news_id="1" short_text="short1" full_text="full1" title="title1"
+		creation_date="2015-03-30 19:40:00" modification_date="2003-05-03" />
+	<News_Author news_author_id="1" author_id="1" news_id="1" />
+</dataset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<News news_id="1" short_text="short" full_text="full" title="title"
+		creation_date="2015-03-30 19:40:00" modification_date="2003-05-03" />
+	<Comments comment_id="1" comment_text="first comment"
+		creation_date="2015-03-30 19:30:00" news_id="1" />
+	<Comments comment_id="2" comment_text="second comment"
+		creation_date="2015-03-30 19:40:00" news_id="1" />
+</dataset>

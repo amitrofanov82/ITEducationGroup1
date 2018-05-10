@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="authorDao" class="com.epam.newsmanagement.dao.impl.AuthorDaoImpl"
+		scope="prototype">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="tagDao" class="com.epam.newsmanagement.dao.impl.TagDaoImpl"
+		scope="prototype">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="commentDao" class="com.epam.newsmanagement.dao.impl.CommentDaoImpl"
+		scope="prototype">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="newsDao" class="com.epam.newsmanagement.dao.impl.NewsDaoImpl"
+		scope="prototype">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="authorService" class="com.epam.newsmanagement.service.impl.AuthorServiceImpl">
+		<property name="authorDao" ref="authorDao" />
+	</bean>
+
+	<bean id="commentService" class="com.epam.newsmanagement.service.impl.CommentServiceImpl">
+		<property name="commentDao" ref="commentDao" />
+	</bean>
+
+	<bean id="newsService" class="com.epam.newsmanagement.service.impl.NewsServiceImpl">
+		<property name="newsDao" ref="newsDao" />
+	</bean>
+
+	<bean id="tagService" class="com.epam.newsmanagement.service.impl.TagServiceImpl">
+		<property name="tagDao" ref="tagDao" />
+	</bean>
+
+	<bean id="newsManagementService"
+		class="com.epam.newsmanagement.service.impl.NewsManagementServiceImpl">
+		<property name="authorService" ref="authorService" />
+		<property name="commentService" ref="commentService" />
+		<property name="tagService" ref="tagService" />
+		<property name="newsService" ref="newsService" />
+	</bean>
+
+</beans>

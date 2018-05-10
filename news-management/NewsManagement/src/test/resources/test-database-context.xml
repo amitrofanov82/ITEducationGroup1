@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder location="database-test.properties" />
+
+	<bean id="sqlDataTypeFactory" class="org.dbunit.ext.oracle.OracleDataTypeFactory" />
+
+	<bean id="dbUnitDatabaseConfig" class="com.github.springtestdbunit.bean.DatabaseConfigBean">
+		<property name="datatypeFactory" ref="sqlDataTypeFactory" />
+	</bean>
+	<bean id="dbUnitDatabaseConnection"
+		class="com.github.springtestdbunit.bean.DatabaseDataSourceConnectionFactoryBean">
+		<property name="databaseConfig" ref="dbUnitDatabaseConfig" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<import resource="classpath:application-context.xml" />
+
+</beans>

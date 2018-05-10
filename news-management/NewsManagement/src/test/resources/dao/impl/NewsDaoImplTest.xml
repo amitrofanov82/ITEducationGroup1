@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<News news_id="1" short_text="short1" full_text="full1" title="title1"
+		creation_date="2015-03-30 19:40:00" modification_date="2003-05-03" />
+	<News news_id="2" short_text="short2" full_text="full2" title="title2"
+		creation_date="2014-03-30 19:40:00" modification_date="2004-05-03" />
+	<News news_id="3" short_text="short3" full_text="full3" title="title3"
+		creation_date="2013-03-30 19:40:00" modification_date="2005-05-03" />
+	<Comments comment_id="1" comment_text="first comment"
+		creation_date="2015-03-30 19:30:00" news_id="2" />
+	<Comments comment_id="2" comment_text="second comment"
+		creation_date="2015-03-30 19:40:00" news_id="2" />
+	<Author author_id="1" name="Gogol" />
+	<Author author_id="2" name="Pushkin" />
+	<News_Author news_author_id="1" author_id="1" news_id="2" />
+	<Tag tag_id="1" tag_name="music" />
+	<Tag tag_id="2" tag_name="sport" />
+	<News_Tag news_tag_id="1" tag_id="1" news_id="1" />
+</dataset>

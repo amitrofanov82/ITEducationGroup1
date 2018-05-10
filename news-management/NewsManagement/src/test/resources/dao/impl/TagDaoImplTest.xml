@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Tag tag_id="1" tag_name="music" />
+	<Tag tag_id="2" tag_name="politics" />
+	<Tag tag_id="3" tag_name="economics" />
+	<News news_id="1" short_text="short" full_text="full" title="title"
+		creation_date="2015-03-30 19:40:00" modification_date="2003-05-03" />
+	<News_Tag news_tag_id="1" tag_id="1" news_id="1" />
+	<News_Tag news_tag_id="2" tag_id="2" news_id="1" />
+</dataset>
