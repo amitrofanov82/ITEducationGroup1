@@ -1,0 +1,174 @@
+1. JPA/Hibernate нужно для:
+	предоставляет средства для автоматической генерации и обновления набора таблиц, построения запросов и обработки полученных данных и может значительно уменьшить время разработки, которое обычно тратится на ручное написание SQL- и JDBC-кода. Hibernate автоматизирует генерацию SQL-запросов и освобождает разработчика от ручной обработки результирующего набора данных и преобразования объектов
+
+
+
+
+	
+То есть, стоит сначала получше научится жить без Хибернэйта, и когда надоест - тогда можно пробовать переходить на хибернэйт. 
+
+
+---
+Версии
+Хибернэйт является реализацией JPA с версии 4. До этого был сам себе ORM-framework. Сейчас последняя 5.
+
+JPA 1 появился в 2006. JPA 2 появился с Java EE 6. Она актуальная, 2.2 с 2017. 
+
+Hibernate поддерживает JPA 2.2 начиная c Hibernate 5.3 (послендний стабильный релиз по сотоянию на 15 мая 2018)
+	В JPA 2.2 довольно важные обновления поддержки типов даты\времени, появившихся в Джава 8. Без этого сложно бы было.
+
+---
+Hibernate Native API vs JPA API vs Spring Hibernate:
+
+у него исторически есть свой подход. Но лучше использовать JPA. Причина такой неразберихи - Hibernate exists longer than JPA. 
+У нэйтива может быть больше возможностей, но не надо.
+
+В общем - всегда выгоднее изучать standard API. А стандартом является JPA.
+
+К этому впридачу из новомодных фрэймворков Спринг добавил свои подходы и сочетания, что ещё больше вариантов использования и АПИ добавило.
+
+По ссылке вопль страдания вполне себе сильных программистов на эту тему:
+https://stackoverflow.com/questions/37012437/spring-hibernate-versus-spring-data-jpa-are-they-different
+
+По точке входа основные классы:
+JPA EntityManager or Hibernate SessionFactory, у них одна цель, но разные АПИ
+
+---
+Класс - java bean, с аннотациями или xml для настройки маппинга. Важно equals + hashcode на основе содержания
+
+JPA работает с коллекциями этих объектов. Прежде всего лист и сет. 
+
+---
+SE подход:
+
+Создание EntityManager без использования Dependency Injection конейнеров:
+
+String persistenceUnitName; // actually comes from some config file
+EntityManager entityManager = Persistence.createEntityManagerFactory(persistenceUnitName).createEntityManager();
+
+Разобрабть вопрос чувака по ссылке:
+https://stackoverflow.com/questions/44909494/use-jpa-in-java-se-application-with-support-for-transactions
+
+
+Далее, нужно описать Persistence Context. Положить его можно или в корень класспаса, или куда угодно на диск, или в META-INF.
+Главное передать его в метод, создающий EntityManager (как правило это EntityManagerFactory, доступный статически из класса Persistence)
+По умолчанию ищется в src/META-INF/persistence.xml (тогда можно не указывать нигде, сам найдется)
+
+
+Живой пример копипастим отсюда с пункта 6:
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html
+
+Ещё можно использовать у EntityManagerFactory property name="packagesToScan", где он сам просканирует все классы для маппинга.
+
+По транзакциям чуть больше слов, на основании примера: 
+Query q = em.createQuery("delete from Team t " +
+    "where t.teamName = :name");
+q.setParameter("name", aTeamName);
+em.getTransaction().begin();
+q.executeUpdate();
+em.getTransaction().commit();
+
+
+
+---
+Тут большой разговор и картинка на тему состояния Entity. Обговрить:
+https://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge
+
+---
+HQL/JPAQl - SQL подобный язык, только вместо таблиц\стобцов используются сразу объекты и их поля.
+
+---
+Некторые допнастройки хибернэйта:
+то что видели, плюс:
+	ленивая загрузка
+
+---
+Основные Компоненты (в википедии больше, но больше не надо, пока нужда не заставит):
+Hibernate ORM (до версии 4.1 называлось Hibernate Core)
+Hibernate Annotations (с версии 3.6 объединены с Hibernate Core/ORM) 
+Hibernate EntityManager — реализация Java Persistence API
+
+
+=======
+JPA:
+EntityManagerFactory and EntityManager основные классы для создания объекта, отвечающего за ORM функционал.
+Persistence class is bootstrap class to create an entity manager factory.
+Наши с прошлого урока SessionFactory and Session are hibernate-specific.
+
+В случае с хибернэйом эта EntityManager реализация построена на тех же хибернэйтовских сессиях. Зная, что у вас хибернэйт,
+если нужны его дополнительные АПИ, то можно (но не нужно) сделать так: 
+
+Session session = entityManager.unwrap(Session.class);
+Или, тот же результат: Session session = (Session) entityManager.getDelegate();
+
+JPAQL просто на википедии глянем, и вообще пример хороший:
+https://en.wikipedia.org/wiki/Java_Persistence_Query_Language
+
+---------
+Первоисточники:
+
+
+
+javax.persistence API: 
+https://docs.oracle.com/javaee/7/api/javax/persistence/package-summary.html  
+	+ 3 подпакета, из которых интересен для базового изучения только criteria. 
+Maven: https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api/2.2
+
+JPA QL. Определен как часть спецификации JPA. В качестве первоисточника знаний условно примем туториал от Оракла:
+https://docs.oracle.com/javaee/6/tutorial/doc/bnbtg.html
+
+reference implementation for JPA is EclipseLink.
+
+Hibernate:
+https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.2.17.Final   
+(5.3.0 вышелтолько вчера, на мавенцентрале нет, есть на jfrog только)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
