@@ -1,0 +1,22 @@
+2018-05-22 19:40:26 INFO  Vasya:11 - hello from Vasya Logger
+2018-05-22 19:40:26 DEBUG Vasya:13 - hello from Vasya Logger
+2018-05-22 19:40:26 ERROR Vasya:15 - hello from Vasya Logger
+2018-05-22 19:40:26 INFO  MainLoggerTester:17 - hello from Class Logger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

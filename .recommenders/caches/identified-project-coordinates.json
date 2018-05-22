@@ -1,1 +1,1 @@
-{}
+[[{"location":"C:\\Program Files\\Java\\jdk1.8.0_101","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"D:\\Mitrofanov\\apache-tomcat-8.5.29\\lib\\servlet-api.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"C:\\Users\\mitrofanov_a\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.8.4\\gson-2.8.4.jar","type":"JAR","hints":{}},"com.google.code.gson:gson:2.8.4"]]
