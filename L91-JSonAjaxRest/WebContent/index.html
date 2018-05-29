@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function getNewElephant() {
+		console.log("getting elephant");
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 
+			'http://localhost:8080/ExampleWithAjaxJson/elephantController', 
+			false);
+		xhr.send();
+		if (xhr.status == 200) {
+			let elephant = JSON.parse(xhr.responseText);
+			console.log(elephant);
+			var div = document.getElementById("elephantHolder");
+			div.innerHTML = "<h2>" + elephant.name + "</h2>" +
+					"<p>" + elephant.personality.temperament +
+					"  " + elephant.weightKg + "</p>";
+			
+		} else {
+			console.log(xhr);
+		}
+	}
+	
+	function successCallbackFunction(someParam1, someParam2){
+		console.log(someParam1);
+		console.log(someParam2);
+	}
+	
+	function postOtherElephant(){
+		var o = new Object();
+		o.name = document.getElementById("elName").value;
+		o.personality = new Object();
+		o.personality.temperament = document.getElementById("elTemp").value;
+		console.log(o);
+		
+		jQuery.post( 
+			"http://localhost:8080/ExampleWithAjaxJson/elephantController",
+			JSON.stringify(o), 
+			successCallbackFunction);
+	}
+	//jQuery.post( url [, data ] [, success ] [, dataType ] )
+</script>
+
+</head>
+<body>
+
+<button onclick="getNewElephant()">
+	GetElephant
+</button>
+
+<form action="elephantController">
+	<input name="elephName" id="elName"/>
+	<input name="temperament" id="elTemp"/>
+	<input type="button" onclick="postOtherElephant()"
+		value="post new Elephant" /> 
+</form>
+
+
+<div id="elephantHolder"> 
+
+</div>
+
+
+</body>
+</html>
